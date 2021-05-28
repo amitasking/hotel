@@ -1,0 +1,209 @@
+body {
+ 
+}
+
+#home {
+	height: 600px;
+	background-position: center;
+    /*background-image: url("home1.jpg");*/
+
+}
+
+
+#home img{
+	height: 100%;
+	width: 100%;
+}
+
+#div1 {
+
+}
+#nav {
+	width: 100%;
+	height: 55px;
+	background-color: #972dcc;
+	position: absolute;
+	top: 8px;
+	
+}
+
+.right {
+	float: right;
+}
+
+.nav-c {
+	color: white;
+	width: 35%;
+	display: inline-block;
+	margin: 15px;
+}
+
+.nav-butt {
+	margin : 12px;
+}
+
+.home-text {
+	animation-name: home-t;
+	animation-duration: 2s;
+	color: white;
+	position: absolute;
+	top: 30%;
+	font-size: 40px;
+	margin-left : 30px;
+}
+
+#book {
+	height: 40px;
+	width: 120px;
+
+	position: absolute;
+	top: 48%;
+	left: 4%;
+
+}
+
+#book:hover{
+	background-color: violet;
+	border : none;
+}
+
+@keyframes home-t {
+  from {top: 0%}
+  to {top: 30%;}
+}
+
+.info{
+	height: 300px;
+}
+
+.info-text {
+	float: left;
+	width: 45%;
+	height: 300px;
+
+
+}
+
+
+.info-img {
+	float: left;
+	height: 300px;
+	width: 20%;
+	margin : 10px;
+/*	margin-right : 10px;*/
+}
+
+
+.info-img img {
+	height: 100%;
+	width: 100%;
+	/*margin : 20px;*/
+	
+}
+/*
+#footer {
+	height: 100px;
+	position: relative;
+	top: 10%;
+	background: blue;
+}*/
+
+
+/*-------------css---------*/
+
+.gallary{
+   margin-top: 10%;
+}
+
+.gal-img{
+	height: 250px;
+	width: 23%;
+	float: left;
+	margin : 10px;
+}
+
+
+.gal-img img {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	opacity: 0.9;
+
+}
+
+
+.view-large {
+	/*visibility: hidden;*/
+	 position: absolute;
+     margin-top: 10px;
+  	font-size: 60px;
+}
+
+.gal-img img:hover {
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+
+}
+.gal-img img:hover .view-large {
+	visibility: visible;
+	position: absolute;
+	margin-top: 10px;
+
+	
+}
+/*.gal-img img:hover .e {
+	display: block;
+}*/
+
+
+
+.row1{
+	animation-duration: 4s;
+	animation-timing-function: linear;
+}
+
+.left {
+	float: left;
+}
+
+
+.icon {
+	border : 1px solid;
+	 width: 200px;
+	padding-top: 20px;
+	padding-left: 0px;
+	font-size: 70px;
+	color: #7d58f5;
+	margin-left:60px;
+	text-align: center;
+	height: 150px;
+	padding-top: 50px;
+}
+.icon-star {
+	border : 1px solid;
+	 width: 280px;
+	padding-top: 20px;
+	padding-left: 10px;
+	font-size: 40px;
+	color:#6832a8;
+}
+
+#icon-row {
+	margin-top:100px;
+	
+}
+
+#footer {
+	height: 50px;
+	background-color: #972dcc;
+	position: relative;
+	top: 550px;
+	border: 2px solid red;
+}
+
+.footer-content{
+	position: absolute;
+	
+	color: white;
+}
