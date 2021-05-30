@@ -1,0 +1,213 @@
+body {
+
+}
+
+a {
+	color: white;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+
+ img {
+	height: 100%;
+	width: 100%;
+
+}
+
+
+#home {
+	margin-bottom: 0px;
+	height: 100vh;
+	background-position: center;
+	
+}
+
+
+#home img{
+	height: 100%;
+	width: 100%;
+}
+
+#div1 {
+
+}
+#nav {
+	width: 100%;
+	height: 55px;
+	background-color: transparent;
+	position: absolute;
+	top: 8px;
+	
+}
+
+.right {
+	float: right;
+}
+
+.nav-c {
+	color: white;
+	width: 35%;
+	display: inline-block;
+	margin: 15px;
+}
+
+.nav-butt {
+	margin : 12px;
+}
+
+.home-text {
+	animation-name: home-t;
+	animation-duration: 2s;
+	color: white;
+	position: absolute;
+	top: 30%;
+	font-size: 40px;
+	margin-left : 30px;
+}
+
+
+
+
+
+.info{
+	height: 300px;
+}
+
+.info-text {
+	float: left;
+	width: 45%;
+	height: 300px;
+
+
+}
+
+
+.info-img {
+	float: left;
+	height: 300px;
+	width: 20%;
+	margin : 10px;
+/*	margin-right : 10px;*/
+}
+
+
+.info-img img {
+	height: 100%;
+	width: 100%;
+	/*margin : 20px;*/
+	
+}
+
+
+input {
+	height: 25px;
+	margin-top : 10px;
+	margin-left : 18px;
+}
+
+
+button {
+	margin-top: 13px;
+	margin-left: 18px;
+	width: 88%;
+	height: 40px;
+	color: white;
+	background-color: indigo;
+	font-size: 18px;
+	font-weight: 700;
+	
+}
+
+
+@keyframes home-t {
+  from {top: 0%}
+  to {top: 30%;}
+}
+
+#book {
+
+	animation-name: book-anim;
+	animation-duration: 2s;
+	background: white;
+	position: absolute;
+	height: 350px;
+	width: 350px;
+	box-shadow: 0 4px 8px 0 #c4bcbc;
+	top: 25%;
+	right: 5%;
+
+}
+
+@keyframes book-anim {
+  from {top: 0%;}
+  to {right: 5%;}
+}
+
+
+
+
+
+.row1{
+	animation-duration: 4s;
+	animation-timing-function: linear;
+}
+
+.left {
+	float: left;
+}
+
+
+
+#footer {
+	height: 50px;
+	background-color: #202942;
+	position: relative;
+	top: 350px;
+	border: 2px solid red;
+}
+
+.footer-content{
+	position: absolute;
+	
+	color: white;
+}
+
+
+
+.about-img {
+	padding-top: 51px;
+	width: 380px;
+	height: 280px;
+	float: left;
+	/*background: green;*/
+}
+
+
+
+.icon-text {
+	letter-spacing: 1px;
+	font-size : 15px;
+}
+
+.fontAwesome {
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.thank-you {
+	height: 250px;
+	width: 600px;
+	position: absolute;
+	top: 20%;
+	left : 25%;
+	animation-name: thank;
+	animation-duration: 1s;
+	box-shadow: 0 4px 8px 0 #c4bcbc;
+	background: white;
+	z-index: 2;
+}
+
+@keyframes thank{
+	from {top: 0%;}
+	to {top:20%;}
+}

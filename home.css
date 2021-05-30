@@ -2,6 +2,11 @@ body {
  
 }
 
+a {
+	color: white;
+	font-weight: 550;
+	text-decoration: none;
+}
 
  img {
 	height: 100%;
@@ -171,17 +176,21 @@ body {
 	/*background: green;*/
 	width: 100%;
 	margin-top:35px;
+
 	
 }
 
 
 
 #footer {
-	height: 50px;
-	background-color: #972dcc;
+	word-spacing: 1px;
+	letter-spacing: 1.5px;
+	padding-left: 20px;
+	height: 180px;
+	background-color: #202942;
 	position: relative;
-	top: 350px;
-	border: 2px solid red;
+	top: 80px;
+	/*border: 2px solid red;*/
 }
 
 .footer-content{
@@ -227,4 +236,19 @@ body {
 
 .fontAwesome {
   font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+#icon1 {
+	animation-name: icon-anim;
+	animation-duration:2s;
+	/*margin-left: 10px;*/
+}
+
+@keyframes icon-anim{
+	from {margin-left: 0px;}
+	to {margin-left: 60px;}
+}
+
+#footer-icons {
+	font-size: 35px;
 }

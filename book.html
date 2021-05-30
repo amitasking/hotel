@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 	<title>home</title>
 </head>
-<body>
+<body style = "">
 
 	<div id="nav">
 		<div class="right nav-c">
@@ -38,35 +38,39 @@
 		</div>
 		
 		<div class="book-form">
-			<div class= "field">
+			<form id = "form">
+				<div class= "field">
 				<input style = "width: 84%;" type="" name="f_name" placeholder="Full name">
 			</div>
 
-			<div class= "field">
-				<input style = "float : left;  width: 38%" type="date" name="f_name" placeholder="check-in">
-			</div>
+				<div class= "field">
+					<input required style = "float : left;  width: 38%" type="date" name="from" placeholder="check-in">
+				</div>
 
-			<div class= "field">
-				<input style = " float : left; width: 40%" type="date" name="f_name" placeholder="check-out">
-			</div>
+				<div class= "field">
+					<input required style = " float : left; width: 40%" type="date" name="to" placeholder="check-out">
+				</div>
 
-			<div class= "field">
-				<input style = "float : left;  width: 38%" type="" name="" placeholder="Adults">
-			</div>
+				<div class= "field">
+					<input required style = "float : left;  width: 38%" type="number" min = 1 max = 3 name="adults" placeholder="Adults">
+				</div>
 
-			<div class= "field">
-				<input style = " float : left; width: 38%" type="" name="f_name" placeholder="children">
-			</div>
+				<div class= "field">
+					<input required style = " float : left; width: 38%" type="number"  name="children" placeholder="children">
+				</div>
 
-			<div class= "field">
-				<input style = "float : left;  width: 38%" type="" name="f_name" placeholder="Phone">
-			</div>
+				<div class= "field">
+					<input required style = "float : left;  width: 38%" type="number" name="phn" placeholder="Phone">
+				</div>
 
-			<div class= "field">
-				<input style = " float : left; width: 38%" type="time" name="f_name" placeholder="Full name">
-			</div>
+				<div class= "field">
+					<input style = " float : left; width: 38%" type="time" name="time" placeholder="Full name">
+				</div>
+					<button type="submit" onclick="booked(event)"> BOOK </button>
+			</form>
+			
 
-			<button onclick="booked()"> BOOK </button>
+		
 
 
 		</div>
@@ -76,37 +80,78 @@
 <div id = "thank-you">
 	<i style = "margin-left: 45%; margin-top: 12px; text-align: center; font-size: 70px;" class="far fa-thumbs-up"></i>
 	<div>
-		<h2 style = "text-align: center;">Thank you, {name} your room has been booked.</h2>
+		<h2 id = "welcome" style = "text-align: center;"></h2>
 		<p style = "text-align: center;">We'll contact you soon, stay happy!</p>
 		<button>Home</button>
 	</div>
-</div>
-
-<div id="footer">
-	<div class="footer-content">
-			footer
-	</div>
-
-
 </div>
 
 
 
 </body>
 <script>
+		console.log(localStorage.getItem('id1'));
+
+	let form = document.getElementById('form');
+	console.log(form)
 	let book = document.getElementById('book');
 	let heading = document.getElementById('head');
 	let ty = document.getElementById('thank-you');
 	let home = document.getElementById('home');
+	let welcome = document.getElementById('welcome');
 	ty.style.visibility = 'hidden';
-	function booked(){
-		console.log(heading)
+	function booked(event){
+		event.preventDefault();
+		let name = form.elements.f_name.value;
+		let to = form.elements.to.value;
+		let from = form.elements.from.value;
+		let adults = form.elements.adults.value;
+		let children = form.elements.children.value;
+		let phn = form.elements.phn.value;
+		let time = form.elements.time.value;
+
+		if(!( name && to && from && adults && children && phn && time)){
+			alert("All fields are required");
+			return;
+		}
+
+		if(!allLetter(name)){
+			alert("name should be alphabet only");
+			return;
+		}
+
+
+
+
+		
+		console.log(name,to,from,adults,children,phn,time)
 		book.style.visibility = 'hidden';
 		home.style.opacity = 0.8
 		heading.style.visibility = 'hidden';
+		welcome.innerHTML = `Thank you, ${name} your room has been booked.`;
 		ty.style.visibility = 'visible';
 		ty.classList.add('thank-you');
+		let obj = {name:name,to:to,from:from,adults:adults,children : children,phn:phn,time:time}
+		// localStorage.setItem('id1',obj)
+
+
 	}
+
+
+
+	function allLetter(inputtxt)
+  {
+   var letters = /^[A-Za-z]+$/;
+   if(inputtxt.match(letters))
+     {
+      return true;
+     }
+   else
+     {
+     
+     return false;
+     }
+  }
 </script>
 
 </html>

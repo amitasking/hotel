@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+	<title>home</title>
+</head>
+<body style = "">
+
+	<div id="nav">
+		<div class="right nav-c">
+			<span class="nav-butt"><a href="home.html"> HOME </a></span>
+			<span class="nav-butt"><a href="book.html"> BOOK </a></span>
+			<span class="nav-butt"><a href="gallery.html"> GALLARY </a></span>
+			<span class="nav-butt"><a href="contact-us.html"> CONTACT US </a></span>
+		</div>
+	</div>
+
+
+	<div id="home">
+		<img src="book.jpg" alt="">
+	</div>
+
+	
+
+	<div id = "head" class="home-text">
+		LOGIN  ,  
+		<br>
+		TO YOUR ACCOUNT
+	</div>
+
+
+
+
+	<div id = "book">
+		<div>
+			<h4 style = "text-align: center;">LOGIN</h4>
+		</div>
+		
+		<div class="book-form">
+			<form id = "form">
+				<div class= "field">
+				<input style = "width: 84%;" type="" name="email" placeholder="email :">
+				<input style = "width: 84%;" type="" name="password" placeholder="password :">
+			</div>
+
+					<button type="submit" onclick="booked(event)"> LOGIN </button>
+
+			</form>
+			
+
+		<a href = "signup.html"><h4 style = "cursor: pointer; margin-top : 5px; text-align: center; font-weight: 200; color: black;">Don't have account.</h4></a>
+
+
+		</div>
+	</div>
+
+
+<div id = "thank-you">
+	<i style = "margin-left: 45%; margin-top: 12px; text-align: center; font-size: 70px;" class="far fa-thumbs-up"></i>
+	<div>
+		<h2 id = "welcome" style = "text-align: center;"></h2>
+		<p style = "text-align: center;">We'll contact you soon, stay happy!</p>
+		<button>Home</button>
+	</div>
+</div>
+
+
+
+</body>
+<script>
+		console.log(localStorage.getItem('id1'));
+
+	let form = document.getElementById('form');
+	console.log(form)
+	let book = document.getElementById('book');
+	let heading = document.getElementById('head');
+	let ty = document.getElementById('thank-you');
+	let home = document.getElementById('home');
+	let welcome = document.getElementById('welcome');
+	ty.style.visibility = 'hidden';
+	function booked(event){
+		event.preventDefault();
+		let name = form.elements.f_name.value;
+		let to = form.elements.to.value;
+		let from = form.elements.from.value;
+		let adults = form.elements.adults.value;
+		let children = form.elements.children.value;
+		let phn = form.elements.phn.value;
+		let time = form.elements.time.value;
+
+		if(!( name && to && from && adults && children && phn && time)){
+			alert("All fields are required");
+			return;
+		}
+
+		if(!allLetter(name)){
+			alert("name should be alphabet only");
+			return;
+		}
+
+
+
+
+		
+		console.log(name,to,from,adults,children,phn,time)
+		book.style.visibility = 'hidden';
+		home.style.opacity = 0.8
+		heading.style.visibility = 'hidden';
+		welcome.innerHTML = `Thank you, ${name} your room has been booked.`;
+		ty.style.visibility = 'visible';
+		ty.classList.add('thank-you');
+		let obj = {name:name,to:to,from:from,adults:adults,children : children,phn:phn,time:time}
+		// localStorage.setItem('id1',obj)
+
+
+	}
+
+
+
+	function allLetter(inputtxt)
+  {
+   var letters = /^[A-Za-z]+$/;
+   if(inputtxt.match(letters))
+     {
+      return true;
+     }
+   else
+     {
+     
+     return false;
+     }
+  }
+</script>
+
+</html>

@@ -8,6 +8,11 @@ body {
     /*background-image: url("home1.jpg");*/
 
 }
+a {
+	color: white;
+	font-weight: 550;
+	text-decoration: none;
+}
 
 
 #home img{
@@ -33,7 +38,7 @@ body {
 
 .nav-c {
 	color: white;
-	width: 35%;
+	width: 40%;
 	display: inline-block;
 	margin: 15px;
 }
@@ -195,11 +200,15 @@ body {
 }
 
 #footer {
-	height: 50px;
-	background-color: #972dcc;
+	word-spacing: 1px;
+	letter-spacing: 1.5px;
+	padding-left: 20px;
+	height: 180px;
+	background-color: #202942;
 	position: relative;
-	top: 550px;
-	border: 2px solid red;
+	top: 590px;
+	bottom: 0px;
+	/*border: 2px solid red;*/
 }
 
 .footer-content{
@@ -229,4 +238,15 @@ body {
 @keyframes img-anim{
 	from {height: 10px;}
 	to {height: 450px;}
+}
+
+#row1 {
+	/*position: relative;
+	top : 2%;
+	*//*margin-top: 5%;*/
+}
+
+
+#footer-icons {
+	font-size: 35px;
 }

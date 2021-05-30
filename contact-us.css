@@ -86,7 +86,7 @@ button {
 
 
 #home {
-	height: 450px;
+	height: 550px;
 	background-position: center;
     /*background-image: url("home1.jpg");*/
 
@@ -95,4 +95,30 @@ button {
 #home img{
 	height: 100%;
 	width: 100%;
+}
+
+#footer-icons {
+	font-size: 35px;
+}
+
+#footer {
+	word-spacing: 1px;
+	letter-spacing: 1.5px;
+	padding-left: 20px;
+	height: 180px;
+	background-color: #202942;
+	position: relative;
+	top: 590px;
+	bottom: 0px;
+	/*border: 2px solid red;*/
+}
+
+.footer-content{
+	position: absolute;
+	color: white;
+}
+
+#footer-icons {
+	color: white;
+	font-size: 35px;
 }
