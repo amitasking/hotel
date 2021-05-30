@@ -207,3 +207,26 @@ body {
 	
 	color: white;
 }
+
+.big-image {
+	animation-name: img-anim;
+	 /*animation-iteration-count: infinite;*/
+	animation-duration: 2s;
+	border : 4px solid white;	
+	border-style: groove;
+	height: 450px;
+	width: 900px;
+	left: 10%;
+	position: absolute;
+}
+
+.big-image img {
+	height: 100%;
+	width: 100%;
+
+}
+
+@keyframes img-anim{
+	from {height: 10px;}
+	to {height: 450px;}
+}

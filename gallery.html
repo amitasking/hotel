@@ -18,45 +18,67 @@
 	</div>
 
 
-	<div class="gallary">
+	<div id = "gallary" class="gallary">
 			<h2 style = "text-align: center;">GALLARY</h2>
 		<div class="row1">
-			<div class="gal-img">
-			    <!-- <div class=  "view-large">dsdsd</div> -->
-				<img src="g7.jpeg" alt="">
-			</div>
+			<a onclick = "view('g7.jpeg')">
+				<div class="gal-img">
+					<img src="g7.jpeg" alt="">
+				</div>
+		
+			</a>
 
-			<div class="gal-img">
+			<a onclick = "view('g1.jpeg')">
+				<div class="gal-img">
+					<img src="g1.jpeg" alt="">
+				</div>
+		
+			</a>
 
-				<img src="g1.jpeg" alt="">
-			</div>
+			<a onclick = "view('g2.jpeg')">
+				<div class="gal-img">
+					<img src="g2.jpeg" alt="">
+				</div>
+		
+			</a>
 
-			<div class="gal-img">
-				<img src="g2.jpeg" alt="">
-			</div>
-
-			<div class="gal-img">
-				<img src="g3.jpeg" alt="">
-			</div>
+			<a onclick = "view('g3.jpeg')">
+				<div class="gal-img">
+					<img src="g3.jpeg" alt="">
+				</div>
+		
+			</a>
 		</div>
 
 
 		<div class="row1">
-			<div class="gal-img">
-				<img src="g9.jpeg" alt="">
-			</div>
+			<a onclick = "view('g9.jpeg')">
+				<div class="gal-img">
+					<img src="g9.jpeg" alt="">
+				</div>
+		
+			</a>
+		
+			<a onclick = "view('g4.jpeg')">
+				<div class="gal-img">
+					<img src="g4.jpeg" alt="">
+				</div>
+		
+			</a>
 
-			<div class="gal-img">
-				<img src="g4.jpeg" alt="">
-			</div>
+			<a onclick = "view('g5.jpeg')">
+				<div class="gal-img">
+					<img src="g5.jpeg" alt="">
+				</div>
+		
+			</a>
 
-			<div class="gal-img">
-				<img src="g5.jpeg" alt="">
-			</div>
-
-			<div class="gal-img">
-				<img src="g6.jpeg" alt="">
-			</div>
+			<a onclick = "view('g6.jpeg')">
+				<div class="gal-img">
+					<img src="g6.jpeg" alt="">
+				</div>
+		
+			</a>
 		</div>
 
 		
@@ -64,16 +86,51 @@
 	</div>
 
 
+
+
 <div id="footer">
 	<div class="footer-content">
 			footer
+			<!-- <button onclick = "view()">press</button> -->
 	</div>
 
 
 </div>
 
 
+<div id = "big-image" class="big-image">
+	<img id = "big-img" src="">
+</div>
+
+
 </body>
 
+
+<script>
+	let bigImg = document.getElementById('big-image');
+
+	let gal = document.getElementById('gallary');
+
+	bigImg.style.visibility = 'hidden';
+	function view(imgSrc){	
+		// alert(imgSrc);
+		if(bigImg.style.visibility == 'visible'){
+			gallary.style.opacity = 1;
+			bigImg.style.visibility = 'hidden';
+			bigImg.classList.remove('img-anim');
+			console.log(document.getElementById('big-img'));
+			
+		}
+
+		else{
+			gallary.style.opacity = 0.5;
+			document.getElementById('big-img').src = imgSrc;
+			bigImg.classList.add('img-anim');
+			bigImg.style.visibility = "visible";
+		}
+
+
+	}
+</script>
 
 </html>

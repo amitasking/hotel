@@ -59,25 +59,9 @@ body {
 	margin-left : 30px;
 }
 
-#book {
-	height: 40px;
-	width: 120px;
 
-	position: absolute;
-	top: 48%;
-	left: 4%;
 
-}
 
-#book:hover{
-	background-color: violet;
-	border : none;
-}
-
-@keyframes home-t {
-  from {top: 0%}
-  to {top: 30%;}
-}
 
 .info{
 	height: 300px;
@@ -107,26 +91,50 @@ body {
 	/*margin : 20px;*/
 	
 }
-/*
-#footer {
-	height: 100px;
-	position: relative;
-	top: 10%;
-	background: blue;
-}*/
 
 
-/*-------------css---------*/
-
-.gallary{
-   margin-top: 10%;
+input {
+	height: 25px;
+	margin-top : 10px;
+	margin-left : 18px;
 }
 
-.gal-img{
-	height: 250px;
-	width: 23%;
-	float: left;
-	margin : 10px;
+
+button {
+	margin-top: 13px;
+	margin-left: 18px;
+	width: 88%;
+	height: 40px;
+	color: white;
+	background-color: indigo;
+	font-size: 18px;
+	font-weight: 700;
+	
+}
+
+
+@keyframes home-t {
+  from {top: 0%}
+  to {top: 30%;}
+}
+
+#book {
+
+	animation-name: book-anim;
+	animation-duration: 2s;
+	background: white;
+	position: absolute;
+	height: 300px;
+	width: 350px;
+	box-shadow: 0 4px 8px 0 #c4bcbc;
+	top: 25%;
+	right: 5%;
+
+}
+
+@keyframes book-anim {
+  from {top: 0%;}
+  to {right: 5%;}
 }
 
 
@@ -140,38 +148,6 @@ body {
 
 .left {
 	float: left;
-}
-
-
-.icon {
-	/*background: red;*/
-	box-shadow: 0 4px 8px 0 #c4bcbc;
-	 width: 200px;
-	padding-top: 20px;
-	padding-left: 0px;
-	font-size: 50px;
-	/*height: 300px;*/
-	color: #7d58f5;
-	margin-left:60px;
-	text-align: center;
-	height: 120px;
-	/*padding-top: 50px;*/
-}
-.icon-star {
-	border : 1px solid;
-	 width: 280px;
-	padding-top: 20px;
-	padding-left: 10px;
-	font-size: 40px;
-	color:#6832a8;
-}
-
-#icon-row {
-	height: 200px;
-	/*background: green;*/
-	width: 100%;
-	margin-top:35px;
-	
 }
 
 
@@ -190,15 +166,7 @@ body {
 	color: white;
 }
 
-.about-us {
-	padding-left: 35px;
-	padding-top : 10px;
-	box-shadow: 0 4px 8px 0 #c4bcbc;
-	height: 400px;
-	/*display: block;*/
-	margin-left: 20px;
-	/*background: red;*/
-}
+
 
 .about-img {
 	padding-top: 51px;
@@ -208,17 +176,7 @@ body {
 	/*background: green;*/
 }
 
-.about-text{
-	padding-top: 0px;
-	float: left;
-	/*background-color: green;*/
-	height: 300px;
-	width: 590px;
-	margin-left: 20px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-	
-}
+
 
 .icon-text {
 	letter-spacing: 1px;
@@ -227,4 +185,22 @@ body {
 
 .fontAwesome {
   font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.thank-you {
+	height: 250px;
+	width: 600px;
+	position: absolute;
+	top: 20%;
+	left : 25%;
+	animation-name: thank;
+	animation-duration: 1s;
+	box-shadow: 0 4px 8px 0 #c4bcbc;
+	background: white;
+	z-index: 2;
+}
+
+@keyframes thank{
+	from {top: 0%;}
+	to {top:20%;}
 }
