@@ -18,7 +18,7 @@
 
 
 	<div id="home">
-		<img src="book.jpg" alt="">
+		<img src="login.jpg" alt="">
 	</div>
 
 	
@@ -44,7 +44,7 @@
 				<input style = "width: 84%;" type="" name="password" placeholder="password :">
 			</div>
 
-					<button type="submit" onclick="booked(event)"> LOGIN </button>
+					<button type="submit" onclick="login(event)"> LOGIN </button>
 
 			</form>
 			
@@ -69,68 +69,43 @@
 
 </body>
 <script>
-		console.log(localStorage.getItem('id1'));
-
+		
 	let form = document.getElementById('form');
-	console.log(form)
+	// console.log(form)
 	let book = document.getElementById('book');
 	let heading = document.getElementById('head');
 	let ty = document.getElementById('thank-you');
 	let home = document.getElementById('home');
 	let welcome = document.getElementById('welcome');
 	ty.style.visibility = 'hidden';
-	function booked(event){
+	function login(event){
 		event.preventDefault();
-		let name = form.elements.f_name.value;
-		let to = form.elements.to.value;
-		let from = form.elements.from.value;
-		let adults = form.elements.adults.value;
-		let children = form.elements.children.value;
-		let phn = form.elements.phn.value;
-		let time = form.elements.time.value;
+		let email = form.elements.email.value;
+		let pass = form.elements.password.value;
 
-		if(!( name && to && from && adults && children && phn && time)){
+		if(!( email && pass)){
 			alert("All fields are required");
 			return;
 		}
 
-		if(!allLetter(name)){
-			alert("name should be alphabet only");
+		if(!ValidateEmail(email)){
+			 alert("You have entered an invalid email address!")
 			return;
 		}
 
-
-
-
-		
-		console.log(name,to,from,adults,children,phn,time)
-		book.style.visibility = 'hidden';
-		home.style.opacity = 0.8
-		heading.style.visibility = 'hidden';
-		welcome.innerHTML = `Thank you, ${name} your room has been booked.`;
-		ty.style.visibility = 'visible';
-		ty.classList.add('thank-you');
-		let obj = {name:name,to:to,from:from,adults:adults,children : children,phn:phn,time:time}
-		// localStorage.setItem('id1',obj)
 
 
 	}
 
 
 
-	function allLetter(inputtxt)
-  {
-   var letters = /^[A-Za-z]+$/;
-   if(inputtxt.match(letters))
-     {
-      return true;
-     }
-   else
-     {
-     
-     return false;
-     }
-  }
+		function ValidateEmail(mail) {
+ 			if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)){
+    				return (true)
+    			}
+  					 
+   				return (false)
+			}
 </script>
 
 </html>

@@ -131,7 +131,7 @@ button {
 	animation-duration: 2s;
 	background: white;
 	position: absolute;
-	height: 350px;
+	height: 360px;
 	width: 350px;
 	box-shadow: 0 4px 8px 0 #c4bcbc;
 	top: 25%;
@@ -143,8 +143,6 @@ button {
   from {top: 0%;}
   to {right: 5%;}
 }
-
-
 
 
 

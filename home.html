@@ -9,10 +9,12 @@
 
 	<div id="nav">
 		<div class="right nav-c">
-			<span class="nav-butt"><a href="home.html"> HOME </a></span>
-			<span class="nav-butt"><a href="book.html"> BOOK </a></span>
+			<span class="nav-butt"><a href= "home.html"> HOME </a></span>
+			<span class="nav-butt"><a href = "book.html"> BOOK </a></span>
 			<span class="nav-butt"><a href="gallery.html"> GALLARY </a></span>
-			<span class="nav-butt"><a href="contact-us.html"> CONTACT US </a></span>
+			<span class="nav-butt"><a href= "contact-us.html"> CONTACT US </a></span>
+			<span class="nav-butt"><a href= "login.html"> LOGIN </a></span>
+			
 		</div>
 	</div>
 
@@ -30,20 +32,10 @@
 	</div>
 
 	<div>
-		<button id = "book">BOOK NOW</button>
+		<button onclick = "book()" id = "book">BOOK NOW</button>
 	</div>
 		
-	<!-- <div id= "info">
-		<div class="info-text">
-			<center>
-				Welcome To The Hotel
-			</center>
-			
-		</div>
-		<div class="info-img"><img src="room.jpg"></div>
-		<div class="info-img"><img src="home2.jpg"></div>
-	</div> -->
-
+	
 
   <div  id = "icon-row">
   	  <div id = "icon1"  class="left icon">
@@ -132,6 +124,10 @@
 
 
 </body>
-
+<script>
+function book() {
+  location.replace("file:///home/amit/Desktop/prj/book.html")
+}
+</script>
 
 </html>
